@@ -30,23 +30,23 @@ public class SwingCode {
 
 		frame.add(panel);
 		
-		lbl1 = new JLabel("Íåøèôğîâàííûé òåêñò:");
-		lbl2 = new JLabel("Çàøèôğîâàííûé òåêñò:");
+		lbl1 = new JLabel("ÃÃ¥Ã¸Ã¨Ã´Ã°Ã®Ã¢Ã Ã­Ã­Ã»Ã© Ã²Ã¥ÃªÃ±Ã²:");
+		lbl2 = new JLabel("Ã‡Ã Ã¸Ã¨Ã´Ã°Ã®Ã¢Ã Ã­Ã­Ã»Ã© Ã²Ã¥ÃªÃ±Ã²:");
 		txt1 = new JTextField();
 		txt2 = new JTextField();
-		lbl3 = new JLabel("Çàøèôğîâàííûé òåêñò:");
-		lbl4 = new JLabel("Ğàñøèôğîâàííûé òåêñò:");
+		lbl3 = new JLabel("Ã‡Ã Ã¸Ã¨Ã´Ã°Ã®Ã¢Ã Ã­Ã­Ã»Ã© Ã²Ã¥ÃªÃ±Ã²:");
+		lbl4 = new JLabel("ÃÃ Ã±Ã¸Ã¨Ã´Ã°Ã®Ã¢Ã Ã­Ã­Ã»Ã© Ã²Ã¥ÃªÃ±Ã²:");
 		lblOut1 = new JLabel();
 		lblOut2 = new JLabel();
 		
-		btn1 = new JButton("Çàøèôğîâàòü");
+		btn1 = new JButton("Ã‡Ã Ã¸Ã¨Ã´Ã°Ã®Ã¢Ã Ã²Ã¼");
 		btn1.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent ae) 
 			{
 				lblOut1.setText(EncodeString(txt1.getText()));
 				
-				//Êîïèğîâàíèå çàøèôğîâàííîãî òåêñòà â áóôåğ îáìåíà
+			
 				Toolkit
 				.getDefaultToolkit()
 				.getSystemClipboard()
@@ -54,14 +54,13 @@ public class SwingCode {
 			}
 		});
 		
-		btn2 = new JButton("Ğàñøèôğîâàòü");
+		btn2 = new JButton("ÃÃ Ã±Ã¸Ã¨Ã´Ã°Ã®Ã¢Ã Ã²Ã¼");
 		btn2.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent ae) 
 			{
 				lblOut2.setText(EncodeString(txt2.getText()));
 				
-				//Êîïèğîâàíèå ğàñøèôğîâàííîãî òåêñòà â áóôåğ îáìåíà
 				Toolkit
 				.getDefaultToolkit()
 				.getSystemClipboard()
@@ -86,9 +85,6 @@ public class SwingCode {
 	
 	private String EncodeString(String input)
 	{
-		//Ñóòü - áåğóòñÿ ñèìâîëû ASCII îò ' ' äî '~' (âñåãî 95),
-		//ğàçáèâàşòñÿ íà 2 ïîëîâèíû, îíè ìåíÿşòñÿ ìåñòàìè.
-		//Ïîïûêà äîáàâèòü êèğèëëèöó óïèğàåòñÿ â êîäèğîâêè...
 		
 		String output = "";
 		byte arr[] = input.getBytes();
@@ -97,7 +93,7 @@ public class SwingCode {
 		{
 			if(arr[i] >= ' ' && arr[i] <= '~')
 			{
-				if(arr[i] < 'O')	//Ñèìâîë â ñåğåäèíå äèàïàçîíà
+				if(arr[i] < 'O')	
 				{
 					arr[i] += 48;
 				}
