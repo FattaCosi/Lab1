@@ -1,7 +1,6 @@
 import javax.swing.SwingUtilities;
 
 
-//Доп. функционал - результаты копируются в буфер обмена, для большего удобства
 
 
 public class start {
